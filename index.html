@@ -1,40 +1,53 @@
-<HTml>
-    <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <title>Culinaria</title>
-        <link rel="stylesheet" href="estilo.css">
-    </head>
-    <body>
-        <div class="container">
-            <div class="menu">
-                <button>Home</button>
-                <button>A Empresa</button>
-                <button>Serviços</button>
-                <button>Contatos</button>
-                <button>Fale Conosco</button>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receitas | Culinária Criativa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="pagina-receitas">
+    <header class="menu">
+        <nav>
+            <ul>
+                <li><a href="receita.html">Receitas</a></li>
+                <li><a href="dica.html">Dicas</a></li>
+                <li><a href="ingrediente.html">Ingredientes</a></li>
+                <li><a href="utencilios.html">Utensílios</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="conteudo">
+    
+        <section class="receita-destaque">
+            <h3>Strogonoff de Frango</h3>
+            <p>Uma receita clássica brasileira, feita com peito de frango, creme de leite, ketchup e mostarda. Simples, rápida e irresistível!</p>
+            
+            <div class="video-receita">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/qwLVaIJA4LQ" 
+                title="Strogonoff de Frango" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen></iframe>
             </div>
-    
-            <div class="conteudo">
-                <h2>Fiado</h2>
-                <p>Não vendemos fiado.</p>
-    
-                <h3>Missão</h3>
-                <p>te ajudar na culinaria do dia a dia.</p>
-    
-                <h3>Objetivo</h3>
-                <p>
-                    ajudar pessoas que não sabem cozinhar cm receitas praticas e faceis.
-                </p>
-            </div>
-    
-            <div class="rodape">
-                <p>Clientes:</p>
-                <div class="logos">
-                    <img src="culinaria.png" alt="Logo culinaria">
-                </div>
-                <p>&copy; Culinaria</p>
-            </div>
-        </div>
-    </body>
-    </html>
+        </section>
+        <h2>Receitas</h2>
+        <p>Descubra receitas simples, práticas e cheias de sabor para o seu dia a dia.</p>
+        <ul>
+            <li><strong>Omelete de Forno:</strong> rápido e leve.</li>
+            <li><strong>Strogonoff de Frango:</strong> clássico brasileiro.</li>
+            <li><strong>Bolo de Caneca:</strong> sobremesa em 3 minutos.</li>
+        </ul>
+        <section class="receita-destaque">
+            <h3>Strogonoff de Frango</h3>
+            <img src="comida.jpg" alt="Strogonoff de Frango" class="imagem-receita">
+            <p>Uma receita clássica brasileira, feita com peito de frango, creme de leite, ketchup e mostarda. Simples, rápida e irresistível!</p>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p>&copy; 2025 Culinária Criativa. Desenvolvido por Você.</p>
+    </footer>
+</body>
+</html>

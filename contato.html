@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Contato</title>
-    <link rel= href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Removi o script externo para colocar JS interno -->
 </head>
 <body>
+    <img src="logo.jpeg" alt="Logo" class="logo">
+
     <div class="container">
         <div class="menu">
-            <a href="receitas.html">Receitas</a>
-            <a href="dicas.html">Dicas</a>
-            <a href="ingredientes.html">Ingredientes</a>
-            <a href="utensilios.html">Utensílios</a>
+            <a href="receita.html">Receitas</a>
+            <a href="dica.html">Dicas</a>
+            <a href="ingrediente.html">Ingredientes</a>
+            <a href="utencilios.html">Utensílios</a>
             <a href="contato.html">Contato</a>
         </div>
 
@@ -20,9 +23,15 @@
             <p>Preencha o formulário ou envie um e-mail:</p>
             <p>Email: <a href="mailto:contato@culinariaexemplo.com">contato@culinariaexemplo.com</a></p>
 
-            <form>
+            <form id="formContato">
                 <label for="nome">Nome:</label><br>
                 <input type="text" id="nome" name="nome"><br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="text" id="email" name="email"><br><br>
+
+                <label for="telefone">Telefone:</label><br>
+                <input type="text" id="telefone" name="telefone"><br><br>
 
                 <label for="mensagem">Mensagem:</label><br>
                 <textarea id="mensagem" name="mensagem" rows="4" cols="30"></textarea><br><br>
@@ -31,5 +40,49 @@
             </form>
         </div>
     </div>
+
+    <script>
+        document.getElementById('formContato').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const nome = document.getElementById('nome').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const telefone = document.getElementById('telefone').value.trim();
+            const mensagem = document.getElementById('mensagem').value.trim();
+
+            const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const regexTelefone = /^[0-9]{8,}$/;
+
+            if (nome === '') {
+                alert('Por favor, preencha o campo Nome.');
+                return false;
+            }
+
+            if (email === '') {
+                alert('Por favor, preencha o campo Email.');
+                return false;
+            } else if (!regexEmail.test(email)) {
+                alert('Por favor, insira um Email válido.');
+                return false;
+            }
+
+            if (telefone === '') {
+                alert('Por favor, preencha o campo Telefone.');
+                return false;
+            } else if (!regexTelefone.test(telefone)) {
+                alert('Por favor, insira um Telefone válido (apenas números, no mínimo 8 dígitos).');
+                return false;
+            }
+
+            if (mensagem === '') {
+                alert('Por favor, preencha o campo Mensagem.');
+                return false;
+            }
+
+            alert('Formulário enviado com sucesso!');
+            // Aqui você pode enviar o formulário com: this.submit();
+            return true;
+        });
+    </script>
 </body>
 </html>

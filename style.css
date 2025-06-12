@@ -118,3 +118,194 @@ footer.rodape {
     margin-top: 50px;
     border-top: 3px solid #ffb6c1;
 }
+/* Reset básico */
+* {
+    box-sizing: border-box;
+}
+
+body.pagina-receitas {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #fff0f5, #ffe6f0);
+    color: #4a004a;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Menu de navegação */
+.menu {
+    background: linear-gradient(to right, #ff85b3, #d28eff);
+    padding: 15px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border-bottom: 4px solid #ffb6c1;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.menu nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.menu nav ul li {
+}
+
+.menu nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    background: #cc66cc;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s ease;
+    display: inline-block;
+    border: 2px solid #fff;
+}
+
+.menu nav ul li a:hover {
+    background-color: #fff;
+    color: #cc00cc;
+    border-color: #cc00cc;
+}
+
+/* Logo */
+.logo {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 100px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.6);
+    z-index: 999;
+}
+
+/* Conteúdo principal */
+.conteudo {
+    max-width: 900px;
+    margin: 80px auto 40px; /* top margin para não ficar atrás do menu */
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    border: 3px dashed #ffccff;
+}
+
+.conteudo h2 {
+    color: #cc00cc;
+    font-size: 28px;
+    border-bottom: 2px solid #ff99cc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.conteudo p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.conteudo ul {
+    list-style-type: disc;
+    padding-left: 25px;
+    color: #4a004a;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.conteudo ul li {
+    margin-bottom: 8px;
+}
+
+/* Seção de receita destaque */
+.receita-destaque {
+    background-color: #fff0f8;
+    padding: 25px;
+    border-radius: 15px;
+    border: 2px solid #ffcce6;
+    box-shadow: 0 5px 15px rgba(255, 192, 203, 0.3);
+    margin-bottom: 40px;
+}
+
+.receita-destaque h3 {
+    color: #e60073;
+    margin-top: 0;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.receita-destaque p {
+    font-size: 17px;
+    color: #660033;
+    margin-bottom: 15px;
+}
+
+/* Vídeo da receita */
+.video-receita {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.video-receita iframe {
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    max-width: 100%;
+    height: auto;
+}
+
+/* Imagem da receita */
+.imagem-receita {
+    display: block;
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    margin-bottom: 15px;
+}
+
+/* Rodapé */
+footer.rodape {
+    background-color: #d28eff;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 15px;
+    margin-top: auto;
+    border-top: 3px solid #ffb6c1;
+}
+
+/* Responsividade básica */
+@media (max-width: 600px) {
+    .menu nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .menu nav ul li a {
+        padding: 10px 20px;
+    }
+    .logo {
+        width: 70px;
+        top: 10px;
+        right: 10px;
+    }
+    .conteudo {
+        margin: 100px 20px 40px;
+        padding: 30px 20px;
+    }
+    .receita-destaque {
+        padding: 20px;
+    }
+    .video-receita iframe {
+        width: 100%;
+        height: 200px;
+    }
+}
+

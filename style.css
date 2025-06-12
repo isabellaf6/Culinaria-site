@@ -1,116 +1,120 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #111;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #fff0f5, #ffe6f0);
+    color: #4a004a;
 }
 
+/* Menu de navegação */
 .menu {
-    background: linear-gradient(to bottom, #000000, #001f3f);
+    background: linear-gradient(to right, #ff85b3, #d28eff);
     padding: 15px 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
-}
-
-.menu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     text-align: center;
-}
-
-.menu li {
-    display: inline-block;
-    margin: 0 20px;
+    border-bottom: 4px solid #ffb6c1;
 }
 
 .menu a {
     text-decoration: none;
     color: #fff;
-    background: #1a1a1a;
+    background: #cc66cc;
     padding: 12px 25px;
-    border-radius: 25px;
+    border-radius: 30px;
     font-weight: bold;
-    transition: 0.3s;
-    border: 2px solid #007bff;
+    margin: 0 10px;
+    transition: 0.3s ease;
     display: inline-block;
+    border: 2px solid #fff;
 }
 
 .menu a:hover {
-    background-color: #007bff;
-    color: #fff;
+    background-color: #fff;
+    color: #cc00cc;
+    border-color: #cc00cc;
 }
 
+/* Conteúdo principal */
 .conteudo {
-    max-width: 800px;
-    margin: 30px auto;
+    max-width: 900px;
+    margin: 40px auto;
     background-color: #fff;
-    padding: 30px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    border: 3px dashed #ffccff;
 }
 
 .conteudo h2 {
-    color: #001f3f;
-    border-bottom: 2px solid #001f3f;
+    color: #cc00cc;
+    font-size: 28px;
+    border-bottom: 2px solid #ff99cc;
     padding-bottom: 10px;
+    margin-bottom: 20px;
 }
 
-.conteudo ul {
-    list-style-type: disc;
-    padding-left: 20px;
-    margin-top: 20px;
+.conteudo p {
+    font-size: 18px;
+    line-height: 1.6;
 }
 
-footer.rodape {
-    background-color: #001f3f;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    margin-top: 40px;
-    font-size: 14px;
+/* Bloco de receita */
+.receita {
+    margin-bottom: 50px;
+    background-color: #fff0f8;
+    padding: 25px;
+    border-radius: 15px;
+    border: 2px solid #ffcce6;
+    box-shadow: 0 5px 15px rgba(255, 192, 203, 0.3);
 }
 
-.receita-destaque {
-    margin-top: 40px;
-    border-top: 2px solid #001f3f;
-    padding-top: 20px;
+.receita h3 {
+    color: #e60073;
+    margin-top: 0;
 }
 
-.receita-destaque h3 {
-    color: #001f3f;
-    font-size: 22px;
-    margin-bottom: 10px;
+.receita p {
+    font-size: 17px;
+    color: #660033;
 }
 
-.imagem-receita {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    border-radius: 10px;
+.receita ul {
+    margin-top: 15px;
+    padding-left: 25px;
+    color: #4a004a;
+}
+
+.receita li {
+    margin-bottom: 6px;
+}
+
+/* Vídeo de receita */
+.receita video {
     display: block;
-    margin: 0 auto 20px auto;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin: 20px auto;
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
 
-.video-receita {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.video-receita iframe {
-    width: 100%;
-    max-width: 560px;
-    height: 315px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
+/* Logo */
 .logo {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 120px;   /* ajuste o tamanho conforme o necessário */
-    height: auto;
-    z-index: 1000;  /* garante que fique por cima de outros elementos */
+    top: 15px;
+    right: 15px;
+    width: 100px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.6);
+    z-index: 999;
+}
+
+/* Rodapé */
+footer.rodape {
+    background-color: #d28eff;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 15px;
+    margin-top: 50px;
+    border-top: 3px solid #ffb6c1;
 }
